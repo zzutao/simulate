@@ -3,7 +3,7 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">分子动力学模拟后处理系统</h3>
       </div>
 
       <el-form-item prop="username">
@@ -216,6 +216,13 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
+  min-height: 100%;
+  width: 100%;
+  /* background-color: $bg; */ // 移除或注释掉原来的背景颜色
+  background-image: url('./R-C.jpg'); // 设置背景图片路径
+  background-size: cover; // 确保图片覆盖整个容器
+  background-position: center; // 将图片居中
+  overflow: hidden;
   .el-input {
     display: inline-block;
     height: 47px;
