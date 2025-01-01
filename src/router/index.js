@@ -84,6 +84,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/ChemicalRecognition',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/app/ChemicalRecognition.vue'),
+        name: '认识物质',
+        meta: { title: '认识物质', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
