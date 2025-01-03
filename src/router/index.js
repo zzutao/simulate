@@ -96,6 +96,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/DataSet',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/app/DataSet.vue'),
+        name: '归纳数据集',
+        meta: { title: '归纳数据集', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/documentation',
     component: Layout,
     children: [
