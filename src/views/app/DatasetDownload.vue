@@ -3,7 +3,8 @@
     <div slot="header" class="clearfix">
       <span>{{ title }}</span>
     </div>
-    <p>{{ description }}</p>
+    <!-- 文字解释 -->
+    <div class="description-content" v-html="description" />
     <el-button
       :type="downloadType === 'direct' ? 'primary' : 'default'"
       style="float: right; margin-top: 10px;"
@@ -28,3 +29,16 @@ export default {
   }
 }
 </script>
+<style scoped>
+.description-content {
+  white-space: pre-line; /* 保留换行符但合并空白 */
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.description-content a {
+  color: #409EFF;
+  text-decoration: none;
+}
+</style>

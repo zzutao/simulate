@@ -1,15 +1,15 @@
 <template>
   <el-card class="box-card">
     <div slot="header" class="clearfix">
-      <span>数据集信息</span>
+      <span>{{ title }}</span>
     </div>
     <!-- 文字解释 -->
-    <p>{{ description }}</p>
+    <div class="description-content" v-html="description" />
 
     <!-- 表格 -->
     <el-table :data="tableData" style="width: 100%; margin-top: 20px;">
-      <el-table-column prop="chineseName" label="中文名称" width="180" />
-      <el-table-column prop="englishName" label="英文名称" width="180" />
+      <el-table-column prop="chineseName" label="中文名称" width="280" />
+      <el-table-column prop="englishName" label="英文名称" width="280" />
       <el-table-column prop="size" label="数据集大小" />
       <el-table-column label="下载">
         <template slot-scope="scope">
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  props: ['tableData', 'description'],
+  props: ['tableData', 'description', 'title'],
   methods: {
     handleDownload(url) {
       window.open(url, '_blank')
@@ -30,3 +30,16 @@ export default {
   }
 }
 </script>
+<style scoped>
+.description-content {
+  white-space: pre-line; /* 保留换行符但合并空白 */
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.description-content a {
+  color: #409EFF;
+  text-decoration: none;
+}
+</style>
