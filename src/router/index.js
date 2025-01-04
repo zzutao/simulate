@@ -96,6 +96,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/HeatMotion',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/app/HeatMotion.vue'),
+        name: '二维平面热运动',
+        meta: { title: '二维平面热运动', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/DataSet',
     component: Layout,
     children: [
