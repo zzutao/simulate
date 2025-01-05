@@ -108,6 +108,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/LogAnalysis',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/app/LogAnalysis.vue'),
+        name: '日志分析',
+        meta: { title: '日志分析', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/DataSet',
     component: Layout,
     children: [
