@@ -80,7 +80,8 @@ export default {
         const response = await request({
           url: 'http://127.0.0.1:5000/api/HeatMotion',
           method: 'post',
-          data: this.form
+          data: this.form,
+          timeout: 40000
         })
 
         if (response.code === 20000) {
