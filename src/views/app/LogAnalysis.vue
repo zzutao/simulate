@@ -22,7 +22,7 @@
             class="upload-demo"
           >
             <el-button slot="trigger" type="primary">上传日志文件</el-button>
-            <div slot="tip" class="el-upload__tip">只能上传一个日志文件，文件格式为 .log</div>
+            <div slot="tip" class="el-upload__tip">只能上传一个日志文件，文件格式为 .log和.lammps</div>
           </el-upload>
         </el-col>
         <!-- 分析按钮 -->
@@ -120,7 +120,7 @@ export default {
         }
         this.lineChartInstance = echarts.init(document.getElementById('lineChart'))
         this.lineChartInstance.setOption({
-          title: { text: '模拟数据折线图' },
+          title: { text: '分子动力学模拟数据折线图' },
           tooltip: { trigger: 'axis' },
           legend: { data: Object.keys(this.lineChartData.yData) },
           xAxis: { type: 'category', data: this.lineChartData.xData },
@@ -140,11 +140,11 @@ export default {
         }
         this.pieChartInstance = echarts.init(document.getElementById('pieChart'))
         this.pieChartInstance.setOption({
-          title: { text: '任务时间分布饼状图' },
+          title: { text: '任务操作时间占比饼状图' },
           tooltip: { trigger: 'item' },
           series: [
             {
-              name: '分布',
+              name: '时间占比',
               type: 'pie',
               data: this.pieChartData.seriesData
             }
