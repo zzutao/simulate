@@ -120,6 +120,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/TrajectoryAnalysis.vue',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/app/TrajectoryAnalysis.vue'),
+        name: '轨迹分析',
+        meta: { title: '轨迹分析', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/DataSet',
     component: Layout,
     children: [
