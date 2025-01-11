@@ -132,6 +132,18 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/GenerateSimulationVideo.vue',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/app/GenerateSimulationVideo.vue'),
+        name: '生成模拟视频',
+        meta: { title: '生成模拟视频', icon: 'documentation', affix: true }
+      }
+    ]
+  },
+  {
     path: '/DataSet',
     component: Layout,
     children: [
