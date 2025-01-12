@@ -17,7 +17,30 @@
 
 <script>
 export default {
-  props: ['title', 'description', 'downloadUrl', 'downloadType'],
+  props: {
+    title: {
+      type: String,
+      required: true,
+      default: '下载数据集'
+    },
+    description: {
+      type: String,
+      required: true,
+      default: ''
+    },
+    downloadUrl: {
+      type: String,
+      required: true
+    },
+    downloadType: {
+      type: String,
+      required: true,
+      validator(value) {
+        // 这个值必须匹配下列字符串中的一个
+        return ['direct', 'newTab'].indexOf(value) !== -1
+      }
+    }
+  },
   methods: {
     handleDownload() {
       if (this.downloadType === 'direct') {
