@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Vue Element Admin',
-
+  // title: 'Vue Element Admin',
+  title: '分子动力学模拟辅助工具系统',
   /**
    * @type {boolean} true | false
    * @description Whether show the settings right-panel
