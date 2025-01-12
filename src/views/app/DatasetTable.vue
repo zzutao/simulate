@@ -22,7 +22,23 @@
 
 <script>
 export default {
-  props: ['tableData', 'description', 'title'],
+  props: {
+    tableData: {
+      type: Array,
+      required: true,
+      default: () => []
+    },
+    description: {
+      type: String,
+      required: true,
+      default: ''
+    },
+    title: {
+      type: String,
+      required: true,
+      default: '数据集表格'
+    }
+  },
   methods: {
     handleDownload(url) {
       window.open(url, '_blank')
