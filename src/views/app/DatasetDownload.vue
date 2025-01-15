@@ -37,7 +37,7 @@ export default {
       required: true,
       validator(value) {
         // 这个值必须匹配下列字符串中的一个
-        return ['direct', 'newTab'].indexOf(value) !== -1
+        return ['direct', 'newTab', 'link'].indexOf(value) !== -1
       }
     }
   },
